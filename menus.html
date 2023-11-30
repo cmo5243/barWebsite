@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Bar Zaza Website - Home page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="zazaBar.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+         <a class="zzlogo" href="index.html" id="navbar__logo">    
+        <img src="zzLogo.png" alt="Zaza Logo" width="90" height="90"></a>
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="menus.html">Menus</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="hours.html">Hours & Info</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="promotions.html">Promotions</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="contact.html">Contact</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://www.zazabazaar.com/">Zaza Bazaar - World Banquet</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- script for togglebar (small-big screeb)-->
+            <script>
+              const navbarToggle = navbar.querySelector('#navbar-toggle');
+        let isNavbarExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+
+        const toggleNavbarVisibility = () => {
+          isNavbarExpanded = !isNavbarExpanded;
+          navbarToggle.setAttribute('aria-expanded', isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener('click', toggleNavbarVisibility);
+
+
+
+        </script>
+        <script>const navbarMenu = document.querySelector('#navbar-menu');
+        const navbarLinksContainer = navbarMenu.querySelector('.navbar-links');
+
+        navbarLinksContainer.addEventListener('click', (e) => e.stopPropagation());
+        navbarMenu.addEventListener('click', toggleNavbarVisibility);</script>
+
+
+
+
+
+
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <a href="drinksMenu.pdf" target="_blank">
+      <img src="drinksSlide.jpg"  class="slideImage">
+    </a>
+    <div class="drinksMenuText"> DRINKS MENU</div>
+    <div class="menuDescriptionText">Drinks Menu</div>
+  </div>
+
+  <div class="mySlides fade">
+   
+    <a href="classicMenu.pdf" target="_blank">
+      <img src="classicSlide.jpg" class="slideImage">
+    </a>
+    <div class="drinksMenuText">
+      CLASSIC AND CONTEMPORARY <br>COCKTAIL MENU</div>
+    <div class="menuDescriptionText">Classic and Contemporary Cocktails Menu</div>
+  </div>
+
+  <div class="mySlides fade">
+  
+    <a href="foodMenu.pdf" target="_blank">
+      <img src="foodSlide.jpg"  class="slideImage">
+    </a>
+    <div class="drinksMenuText">FOOD MENU</div>
+    <div class="menuDescriptionText">Food Menu</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <br>
+  <br>
+</div>
+
+
+
+<script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+  function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+
+
+<!--
+  <ul class="menu__list">
+    <li class="menulist__item">
+      <a href="drink.html">Drinks Menu</a>
+    </li>
+    <li class="menulist__item">
+      <a href="classic.html">Classic Cocktail Menu</a>
+    </li>
+    <li class="menulist__item" >
+      <a href="food.html">Food Menu</a>
+    </li>
+  </ul>
+-->
+    
+<!-- instagram images pictures - -->
+<!-- discover zaza bazaar button and advertisement opposing color bold section - links to zazabazaar website-->
+<!-- footer section  (adress - instagarm link - facebook link)-->
+
+<footer>
+  <div class="fBackgroundImage"></div>
+  <div class ="footerContent">
+    <br>
+    
+    <i id="fText">Bar Zaza, ground floor, Canon's Rd, Bristol BS1 5UH</i>
+    <br>
+    <i id="fText"> manager@bristol.zazabazaar@gmail.com</i>
+  
+    <br>
+    
+
+    <a  id="mediaLinks" href="https://www.instagram.com/bar_zaza_bristol/">instagram</a>
+    <!-- facebook -->
+    <br>
+    <a id="mediaLinks" href="https://www.facebook.com/zazabarbristol/?locale=en_GB">facebook</a>
+  </div>
+  <div class="logoFooter">
+    <img src="footerLogo.png" alt="footerLogoImage" id="footerLogo">
+  </div>
+
+  
+</footer>
+
+</body>
+</html>
+</body>
+</html>

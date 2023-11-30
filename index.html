@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Bar Zaza Website - Home page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="zazaBar.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+         <a class="zzlogo" href="index.html" id="navbar__logo">    
+        <img src="zzLogo.png" alt="Zaza Logo" width="90" height="90"></a>
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="menus.html">Menus</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="hours.html">Hours & Info</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="promotions.html">Promotions</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="contact.html">Contact</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://www.zazabazaar.com/">Zaza Bazaar - World Banquet</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- script for togglebar (small-big screeb)-->
+            <script>
+              const navbarToggle = navbar.querySelector('#navbar-toggle');
+        let isNavbarExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+
+        const toggleNavbarVisibility = () => {
+          isNavbarExpanded = !isNavbarExpanded;
+          navbarToggle.setAttribute('aria-expanded', isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener('click', toggleNavbarVisibility);
+
+
+
+        </script>
+        <script>const navbarMenu = document.querySelector('#navbar-menu');
+        const navbarLinksContainer = navbarMenu.querySelector('.navbar-links');
+
+        navbarLinksContainer.addEventListener('click', (e) => e.stopPropagation());
+        navbarMenu.addEventListener('click', toggleNavbarVisibility);</script>
+
+<!--hero image section-->
+  <!--<h1>ZAZA BAR - HOME PAGE</h1>-->
+  <div class="hero-image">
+    <img src="zzhero.png" alt="Hero Image" height="auto" width="80%" class="center">
+  </div>
+  <!-- redo juicer - no ads???, move advert? error free of user input possiblities max words etc.-->
+
+  <!--    to be changed to use the META (facebook)  API-->
+  <div class="insta-image">
+    <script type="text/javascript" src="https://www.juicer.io/embed/webdev5243-2e809a9e-9772-497f-8da9-9580ea98aa39/embed-code.js" async defer></script>
+  </div>
+<!--
+<div class="embedsocial-hashtag" data-ref="1d8003f3d9b57b42d5830e3b07319bea39085e63"> <a class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial"> Widget by EmbedSocial <span>→</span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+instagram images pictures - -->
+<!-- discover zaza bazaar button and advertisement opposing color bold section - links to zazabazaar website-->
+<!-- footer section  (adres - instagarm link - facebook link)-->
+<!--<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-3a493c40-3f5f-4d11-aff0-7d25e8f5d805"></div>
+-->
+  <footer>
+    <div class="fBackgroundImage"></div>
+    <div class ="footerContent">
+      <br>
+      
+      <i id="fText">Bar Zaza, ground floor, Canon's Rd, Bristol</i>
+      <br>
+      <i id="fText">BS1 5UH</i>
+      <br>
+      <i id="fText"> manager@bristol.zazabazaar@gmail.com</i>
+    
+      <br>
+      
+  
+      <a  id="mediaLinks" href="https://www.instagram.com/bar_zaza_bristol/">instagram</a>
+      <!-- facebook -->
+      <br>
+      <a id="mediaLinks" href="https://www.facebook.com/zazabarbristol/?locale=en_GB">facebook</a>
+    </div>
+    <div class="logoFooter">
+      <img src="footerLogo.png" alt="footerLogoImage" id="footerLogo">
+    </div>
+  
+    
+  </footer>
+
+  
+
+</body>
+</html>

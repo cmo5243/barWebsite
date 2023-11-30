@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Bar Zaza Website - Home page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="zazaBar.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+         <a class="zzlogo" href="index.html" id="navbar__logo">    
+        <img src="zzLogo.png" alt="Zaza Logo" width="90" height="90"></a>
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="menus.html">Menus</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="hours.html">Hours & Info</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="promotions.html">Promotions</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="contact.html">Contact</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://www.zazabazaar.com/">Zaza Bazaar - World Banquet</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- script for togglebar (small-big screeb)-->
+            <script>
+              const navbarToggle = navbar.querySelector('#navbar-toggle');
+        let isNavbarExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+
+        const toggleNavbarVisibility = () => {
+          isNavbarExpanded = !isNavbarExpanded;
+          navbarToggle.setAttribute('aria-expanded', isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener('click', toggleNavbarVisibility);
+
+
+
+        </script>
+        <script>const navbarMenu = document.querySelector('#navbar-menu');
+        const navbarLinksContainer = navbarMenu.querySelector('.navbar-links');
+
+        navbarLinksContainer.addEventListener('click', (e) => e.stopPropagation());
+        navbarMenu.addEventListener('click', toggleNavbarVisibility);</script>
+
+
+
+  <!-- Contact Form -->
+<!--<div class ="contactForm">
+<h1>Contact Us:</h1>
+<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+  
+  <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+  <br>
+  <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+  <br>
+  <textarea id="message" name="message" rows="4" cols="30" placeholder="Your Message" required></textarea><br><br>
+
+  <button type="submit">Send</button>
+</form>
+</div>
+-->
+  <br>
+  <div class="contactContainer">
+    
+
+    <div class="right">
+      <h2>Contact Us</h2>
+      <p>Email: manager.bristol@zazabazaar.com</p>
+      <br>
+      
+      <p>Phone: 0117 922 0330</p>
+
+    <br>
+
+
+
+    <!-- 
+      HTML:
+          <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+
+
+
+
+    JS:
+    javascript
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    if (!name || !
+    -->
+    <form onsubmit="sendEmail(); reset(); return false;"> 
+      <input type="text" id="name" class="field" placeholder="Your Name">
+      <input type="text" id="email" class="field" placeholder="Your Email">
+      <input type="text" id="phone" class="field" placeholder="Phone">
+      <textarea placeholder="Message" id="message" class="field"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    </div>
+  </div>
+  <br>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+          Email.send({
+        Host : "smtp.gmail.com",
+        Username : "calmoo5243@gmail.com",
+        Password : "Lilongwe321",
+        To : 'callummoore5243@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New contact form enquiry",
+        Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Phone no: " + document.getElementById("phone").value
+            + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("message sent succesfully")
+    );
+    }
+
+  </script>
+
+<!-- footer section  (adress - instagarm link - facebook link)-->
+
+<footer>
+  <div class="fBackgroundImage"></div>
+  <div class ="footerContent">
+    <br>
+    
+    <i id="fText">Bar Zaza, ground floor, Canon's Rd, Bristol BS1 5UH</i>
+    <br>
+    <i id="fText"> manager@bristol.zazabazaar@gmail.com</i>
+  
+    <br>
+    
+
+    <a  id="mediaLinks" href="https://www.instagram.com/bar_zaza_bristol/">instagram</a>
+    <!-- facebook -->
+    <br>
+    <a id="mediaLinks" href="https://www.facebook.com/zazabarbristol/?locale=en_GB">facebook</a>
+  </div>
+  <div class="logoFooter">
+    <img src="footerLogo.png" alt="footerLogoImage" id="footerLogo">
+  </div>
+
+  
+</footer>
+</body>
+</html>
